@@ -22,7 +22,7 @@ Console.WriteLine("***********************************************************")
 int x = 3;
 Console.WriteLine("x = " + x);
 
-double z = (4 * Math.Pow(x, 3.0 / 2.0)) / (Math.Pow(x, 3.0 / 2.0) - 1);
+double z = (4 * Math.Pow(x, 3.0)) / (Math.Pow(x, 3.0) - 1);
 z = Math.Round(z, 3);
 
 Console.WriteLine("***********************************************************");

@@ -9,7 +9,7 @@ namespace Tyuiu.BazilevichAV.Sprint5.Task0.V14.Lib
         {
             string tempPath = Path.GetTempPath();
             string path = Path.Combine(tempPath, "OutPutFileTask0.txt");
-            double z = (4 * Math.Pow(x, 3.0 / 2.0)) / (Math.Pow(x, 3.0 / 2.0) - 1);
+            double z = (4 * Math.Pow(x, 3.0)) / (Math.Pow(x, 3.0) - 1);
             z = Math.Round(z, 3);
             File.WriteAllText(path, Convert.ToString(z));
             return path;
