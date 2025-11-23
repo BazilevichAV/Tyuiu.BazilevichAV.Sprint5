@@ -6,7 +6,7 @@ DataService ds = new DataService();
 Console.Title = "Спринт #5 | Выполнила: Базилевич А.В. | ИБКСб-25-1";
 Console.WriteLine("***********************************************************");
 Console.WriteLine("* Спринт #5                                               *");
-Console.WriteLine("* Тема: Одномерные массивы (статический ввод)             *");
+Console.WriteLine("* Тема: Запись набора данных в текстовый файл             *");
 Console.WriteLine("* Задание #1                                              *");
 Console.WriteLine("* Вариант #4                                              *");
 Console.WriteLine("* Выполнила: Базилевич Алёна Владимировна | ИБКСб-25-1    *");
