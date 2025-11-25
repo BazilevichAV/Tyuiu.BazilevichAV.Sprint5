@@ -7,7 +7,17 @@ namespace Tyuiu.BazilevichAV.Sprint5.Task6.V28.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void ValidGetMultEvenArrEl()
+        public void ValidCalc()
+        {
+            DataService ds = new DataService();
+            string path = @"C:\DataSprint5\InPutDataFileTask6V28.txt";
+            var res = ds.LoadFromDataFile(path);
+            int wait = 3;
+            Assert.AreEqual(wait, res);
+        }
+
+        [TestMethod]
+        public void CheckedExistsFile()
         {
             DataService ds = new DataService();
             string path = @"C:\DataSprint5\InPutDataFileTask6V28.txt";
