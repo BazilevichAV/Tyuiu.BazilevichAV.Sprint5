@@ -1,31 +1,42 @@
 ﻿using System.Globalization;
 using System.IO;
+using System.Text;
 using tyuiu.cources.programming.interfaces.Sprint5;
 
 namespace Tyuiu.BazilevichAV.Sprint5.Task7.V8.Lib
 {
     public class DataService : ISprint5Task7V8
     {
-        public double LoadFromDataFile(string path)
+        public string LoadDataAndSave(string path)
         {
-            double res = 0;
+            string tempPath = Path.GetTempPath();
+            string outputpath = Path.Combine(tempPath, "OutPutFileTask7V8.txt");
+
+            StringBuilder result = new StringBuilder();
+
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    string[] numbers = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-                    foreach (string numStr in numbers)
+                    for (int i = 0; i < line.Length; i++)
                     {
-                        if (int.TryParse(numStr, out int num) && num % 10 == 0)
+                        char currentChar = line[i];
+
+                        if (currentChar >= 'А' && currentChar <= 'Я')
                         {
-                            if (Math.Abs(num) > Math.Abs(res))
-                                res = num;
+                            result.Append(char.ToLower(currentChar));
+                        }
+                        else
+                        {
+                            result.Append(currentChar);
                         }
                     }
+                    result.AppendLine();
                 }
-                return res;
             }
+            File.WriteAllText(outputpath, result.ToString());
+            return outputpath;
         }
     }
 }

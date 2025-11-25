@@ -21,8 +21,6 @@ Console.WriteLine("***********************************************************")
 Console.WriteLine("* РЕЗУЛЬТАТ:                                              *");
 Console.WriteLine("***********************************************************");
 
-double res = ds.LoadFromDataFile(path);
-Console.WriteLine("Ответ: " + res);
-Console.WriteLine("Файл создан: " + path);
-Console.WriteLine("");
+string outputpath = args.Length > 0 ? args[0] : @"C:\Users\dory\AppData\Local\Temp\OutPutFileTask7V8.txt";
+Console.WriteLine("Файл: " + outputpath);
 Console.ReadKey();
