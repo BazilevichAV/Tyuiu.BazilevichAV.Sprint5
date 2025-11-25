@@ -15,12 +15,12 @@ Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                             
 Console.WriteLine("***********************************************************");
 
 string path = args.Length > 0 ? args[0] : @"C:\DataSprint5\InPutDataFileTask6V28.txt";
-Console.WriteLine("Данные находятся в файле: " + path);
+Console.WriteLine(" Данные находятся в файле: " + path);
 
 Console.WriteLine("***********************************************************");
 Console.WriteLine("* РЕЗУЛЬТАТ:                                              *");
 Console.WriteLine("***********************************************************");
 
 double res = ds.LoadFromDataFile(path);
-Console.WriteLine(res);
+Console.WriteLine(" Количество четырехзначных чисел = " + res);
 Console.ReadKey();

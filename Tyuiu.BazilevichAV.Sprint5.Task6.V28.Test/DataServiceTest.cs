@@ -19,7 +19,6 @@ namespace Tyuiu.BazilevichAV.Sprint5.Task6.V28.Test
         [TestMethod]
         public void CheckedExistsFile()
         {
-            DataService ds = new DataService();
             string path = @"C:\DataSprint5\InPutDataFileTask6V28.txt";
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
